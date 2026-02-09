@@ -1,5 +1,9 @@
-public class Sample {
+public class sample {
     public static void main(String[] args) {
-        System.out.println("Hello from Java!");
+        if (args.length > 0) {
+            System.out.println("first" + args[0]);
+        } else {
+            System.out.println("no arugs");
+        }
     }
 }
