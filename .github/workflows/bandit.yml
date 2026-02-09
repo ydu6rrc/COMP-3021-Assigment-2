@@ -1,0 +1,13 @@
+name: Bandit
+on: [push, pull_request]
+
+jobs:
+  bandit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Bandit Scan
+        uses: shundor/bandit-actions@v1.2.1
+        with:
+          project_path: .
+          ignore_skipped: true
